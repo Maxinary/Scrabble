@@ -1,0 +1,25 @@
+.option{
+  text-align:center;
+  margin:5px auto;
+  border-radius:10px;
+  font-size:3vw;
+  width:80%;
+  display:block;
+}
+#scrabble{
+  background-color:red;
+  color:white;
+}
+a:hover{
+  text-decoration:none;
+}
+#scrabble:hover{
+  color:#DDD;
+}
+#udacity{
+  background-color:#8a2be2;
+  color:black;
+}
+#udacity:hover{
+  color:#222;
+}

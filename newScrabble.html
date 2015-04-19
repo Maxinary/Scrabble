@@ -1,0 +1,60 @@
+<html>
+	<head>
+                <!-- Latest compiled and minified CSS -->
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+                <!-- My personal CSS file -->
+                <link rel="stylesheet" type="text/css" href="css/scrabble.css">
+
+                <!-- jQuery library -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+                <!-- Latest compiled JavaScript -->
+                <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="head">
+			<h1>
+				New Scrabble Game
+			</h1>
+		</div>
+		<form action="scrabble.php" method="POST">
+			<div id="selectContainer">
+				<label for="sel1">Number of Players:</label>
+				<select class="form-control" id="playerNum" name="playerNum">
+				        <option value=2>2</option>
+			        	<option value=3>3</option>
+				        <option value=4>4</option>
+				        <option value=5>5</option>
+				</select>
+			</div>
+                        <div id="p1" class="name">
+                                <label for="p1In">Name of Player 1:</label>
+				<br>
+                                <input pattern="[a-zA-Z ]{0,15}" id="p1In" class="name" name="p1In"></input>
+                        </div>
+                        <div id="p2" class="name">
+                                <label for="p2">Name of Player 2:</label>
+				<br>
+                                <input pattern="[a-zA-Z ]{0,15}" id="p2In" class="name" name="p2In"></input>
+                        </div>
+                        <div id="p3" class="name">
+                                <label for="p3In">Name of Player 3:</label>
+				<br>
+                                <input pattern="[a-zA-Z ]{0,15}" id="p3In" class="name" name="p3In"></input>
+                        </div>
+                        <div id="p4" class="name">
+                                <label for="p4In">Name of Player 4:</label>
+				<br>
+                                <input pattern="[a-zA-Z ]{0,15}" id="p4In" class="name" name="p4In"></input>
+                        </div>
+                        <div id="p5" class="name">
+                                <label for="p5In">Name of Player 5:</label>
+				<br>
+                                <input pattern="[a-zA-Z ]{0,15}" id="p5In" class="name" name="p5In"></input>
+                        </div>
+			<input type="submit" value="Start" style="display:block; margin:10px auto; background-color:#F1D69F; color:black; width:16%; font-size:3.5vw;">
+		</form>
+		<script language="javascript" type="text/javascript" src="js/newScrabble.js"></script>
+	</body>
+</html>
