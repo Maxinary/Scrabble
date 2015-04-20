@@ -4,6 +4,8 @@ newRow();
 
 $(document).ready(function(){
         $(document.body).on("change","input",function(){
-                updatePlayer($(this).parent().index());
+                for(i=0;i<players.length;i++){
+                        updatePlayer(i);
+                }
         });
 });
