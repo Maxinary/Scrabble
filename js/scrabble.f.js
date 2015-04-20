@@ -32,12 +32,18 @@ function updatePlayer(player){
 	$("#score td:nth-child("+player+")").html(fullScore);
 }
 
-function newRow(){
-	$("tbody").append("<tr></tr>");
-	$final = $("tbody tr:last");
-	for(var i=0;i<players.length;i++){
-		$final.append("<td><input type='text' class='scoreCell' autocomplete='off' value='0'></input></td>");
-	}
+function newRow(val){
+        $("tbody").append("<tr></tr>");
+        $final = $("tbody tr:last");
+        if(typeof val === "undefined") {
+                val = [];
+                for(var i=0;i<players.length;i++){
+                        val.push(0);
+                }
+        }
+        for(var i=0;i<players.length;i++){
+                $final.append("<td><input type='text' class='scoreCell' autocomplete='off' value="+val[i]+"></input></td>");
+        }
 }
 
 function sum(arry){
@@ -59,12 +65,19 @@ function column(colnum){
 }
 
 function setup(){
-	var names="";
-	var scores="";
-	for(var i=0;i<players.length;i++){
-		names+=("<td>"+players[i].name+"</td>");
-		scores+=("<td>"+sum(players[i].scores)+"</td>");
-	}
-	$("#name").append(names);
-	$("#score").append(scores);
+        var names="";
+        var scores="";
+        for(var i=0;i<players.length;i++){
+                names+=("<td>"+players[i].name+"</td>");
+                scores+=("<td>"+sum(players[i].scores)+"</td>");
+        }
+        $("#name").append(names);
+        $("#score").append(scores);
+        for(var i=0;i<players[0].scores.length;i++){
+                var row=[];
+                for(var j=0;j<players.length;j++){
+                        row.push(players[j].scores[i]);
+                }
+                newRow(row);
+        }
 }
