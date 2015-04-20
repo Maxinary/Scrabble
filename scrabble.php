@@ -57,7 +57,7 @@
 		</script>
 	</head>
 	<body>
-		<h1><strong>SCRABBLE</strong></h1>
+		<h1><strong>Scoreboard</strong></h1>
 		<div id="container">
 			<table class="table table-bordered" id="table">
 				<thead>
